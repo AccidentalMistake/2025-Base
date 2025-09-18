@@ -4,13 +4,13 @@ import edu.wpi.first.wpilibj.DigitalInput;
 
 public class LimitSwitch{
 
-    private static DigitalInput LimitSwtich;
+    private static DigitalInput LimitSwitch;
 
     public void limitSwitch() {
-        LimitSwtich = new DigitalInput(9);
+        LimitSwitch = new DigitalInput(9);
     }
 
     public boolean getSwitchState(){
-        return LimitSwtich.get();
+        return LimitSwitch.get();
     }
 }

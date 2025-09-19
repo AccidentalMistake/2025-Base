@@ -40,7 +40,7 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     robotContainer = new RobotContainer();
     limitSwitch = new LimitSwitch();
-
+    pigeon = new Pigeon(RobotMap.PIGEON_ID);
     //These should be at or near the bottom
     oi = new OI();
     ui = new UI();

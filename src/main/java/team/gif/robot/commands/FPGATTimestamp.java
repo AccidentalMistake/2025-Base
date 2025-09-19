@@ -26,6 +26,11 @@ public class FPGATTimestamp extends Command {
         return true;
     }
 
+    @Override
+    public boolean runsWhenDisabled(){
+        return true;
+    }
+
     // Called when the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {}

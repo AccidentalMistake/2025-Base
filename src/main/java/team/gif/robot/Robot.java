@@ -62,6 +62,7 @@ public class Robot extends TimedRobot {
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
     System.out.println(limitSwitch.getSwitchState());
+    System.out.println(pigeon.getHeading());
     ui.update();
 
   }

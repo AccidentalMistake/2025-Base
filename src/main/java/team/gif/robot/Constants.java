@@ -13,6 +13,11 @@ package team.gif.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+    public static final class TalonSRX {
+        public static final double PERCENT_OUTPUT_FORWARD = .2;
+        public static final double PERCENT_OUTPUT_REVERSE = -.2;
+    }
+
 
 
 }

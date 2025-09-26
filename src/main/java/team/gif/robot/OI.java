@@ -5,6 +5,8 @@ import edu.wpi.first.wpilibj2.command.PrintCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import team.gif.robot.commands.FPGATTimestamp;
+import team.gif.robot.commands.MotorForward;
+import team.gif.robot.commands.MotorReverse;
 
 public class OI {
     /*
@@ -90,7 +92,8 @@ public class OI {
          *   aX.onTrue(new PrintCommand("aX"));
          */
         dA.onTrue(new FPGATTimestamp());
-
+        dX.whileTrue(new MotorForward());
+        dB.whileTrue(new MotorReverse());
 
 
     }

@@ -8,11 +8,13 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.TalonSRXControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import team.gif.robot.Robot;
 import team.gif.robot.RobotMap;
 
 public class TalonSrxMotor extends SubsystemBase {
 
-    private TalonSRX talonSRX;
+    private final TalonSRX talonSRX;
+
 
     public TalonSrxMotor() {
         talonSRX = new TalonSRX(RobotMap.TALON_SRX_MOTOR);

@@ -29,5 +29,7 @@ public class MotorReverse extends Command {
 
     // Called when the command ends or is interrupted.
     @Override
-    public void end(boolean interrupted) {}
+    public void end(boolean interrupted) {
+        new TalonSrxMotor().move(0);
+    }
 }

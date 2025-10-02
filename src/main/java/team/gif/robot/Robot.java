@@ -9,7 +9,9 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
+import team.gif.robot.commands.TalonJoystick;
 import team.gif.robot.subsystems.LimitSwitch;
+import team.gif.robot.subsystems.TalonSrxMotor;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
 /**
@@ -22,6 +24,7 @@ public class Robot extends TimedRobot {
   private static Command autonomousCommand;
   private RobotContainer robotContainer;
   public static LimitSwitch limitSwitch;
+  public static TalonSrxMotor talonSrxMotor;
   public static OI oi;
 
   public static Pigeon pigeon;
@@ -41,6 +44,8 @@ public class Robot extends TimedRobot {
     robotContainer = new RobotContainer();
     limitSwitch = new LimitSwitch();
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
+    talonSrxMotor = new TalonSrxMotor();
+    talonSrxMotor.setDefaultCommand(new TalonJoystick());
     //These should be at or near the bottom
     oi = new OI();
     ui = new UI();

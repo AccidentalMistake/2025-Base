@@ -7,7 +7,7 @@ public class TalonJoystick extends Command {
 
     public TalonJoystick() {
         super();
-        //addRequirements(Robot.climber); // uncomment
+        addRequirements(Robot.talonSrxMotor); // uncomment
     }
 
     // Called when the command is initially scheduled.
@@ -19,7 +19,8 @@ public class TalonJoystick extends Command {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.talonSrxMotor.move(Robot.oi.driver.getLeftY());
+        double JoystickPercentOutput = Robot.oi.driver.getLeftY();
+        Robot.talonSrxMotor.move(-JoystickPercentOutput);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

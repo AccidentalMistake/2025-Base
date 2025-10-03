@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 import team.gif.robot.commands.FPGATTimestamp;
 import team.gif.robot.commands.MotorForward;
 import team.gif.robot.commands.MotorReverse;
+import team.gif.robot.commands.SparkMaxForward;
 
 public class OI {
     /*
@@ -94,6 +95,7 @@ public class OI {
         dA.onTrue(new FPGATTimestamp());
         dX.whileTrue(new MotorForward());
         dB.whileTrue(new MotorReverse());
+        dY.whileTrue(new SparkMaxForward());
 
 
     }

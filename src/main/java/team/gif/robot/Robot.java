@@ -11,6 +11,7 @@ import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.TalonJoystick;
 import team.gif.robot.subsystems.LimitSwitch;
+import team.gif.robot.subsystems.NeoMotorSparkMax;
 import team.gif.robot.subsystems.TalonSrxMotor;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
@@ -25,6 +26,7 @@ public class Robot extends TimedRobot {
   private RobotContainer robotContainer;
   public static LimitSwitch limitSwitch;
   public static TalonSrxMotor talonSrxMotor;
+  public static NeoMotorSparkMax neoMotorSparkMax;
   public static OI oi;
 
   public static Pigeon pigeon;
@@ -46,6 +48,7 @@ public class Robot extends TimedRobot {
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
     talonSrxMotor = new TalonSrxMotor();
     talonSrxMotor.setDefaultCommand(new TalonJoystick());
+    neoMotorSparkMax = new NeoMotorSparkMax();
     //These should be at or near the bottom
     oi = new OI();
     ui = new UI();
@@ -66,8 +69,8 @@ public class Robot extends TimedRobot {
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
-    System.out.println(limitSwitch.getSwitchState());
-    System.out.println(pigeon.getHeading());
+    //System.out.println(limitSwitch.getSwitchState());
+    //System.out.println(pigeon.getHeading());
     ui.update();
 
   }

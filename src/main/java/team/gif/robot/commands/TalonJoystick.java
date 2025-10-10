@@ -20,7 +20,12 @@ public class TalonJoystick extends Command {
     @Override
     public void execute() {
         double JoystickPercentOutput = Robot.oi.driver.getLeftY();
-        Robot.talonSrxMotor.move(-JoystickPercentOutput);
+        if (Robot.limitSwitch.getSwitchState()){
+            Robot.talonSrxMotor.move((-JoystickPercentOutput)/2);
+        }
+        else {
+            Robot.talonSrxMotor.move(-JoystickPercentOutput);
+        }
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

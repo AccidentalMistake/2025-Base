@@ -1,5 +1,7 @@
 package team.gif.robot;
 
+import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
+import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class UI {
@@ -13,6 +15,10 @@ public class UI {
      *  and save file as "YYYY elastic-layout.json"
      */
     public UI() {
+        ShuffleboardTab shuffleboardTab = Shuffleboard.getTab("FRC 2025 Pre-Season");
+        shuffleboardTab.addBoolean("Limit Switch", Robot.limitSwitch::getSwitchState);
+
+        Robot.pigeon.addToShuffleboard("FRC 2025 BAB", "Pigeon Heading");
         
     }
 
@@ -25,5 +31,6 @@ public class UI {
     public void update() {
         //Example
         //SmartDashboard.putNumber("Climber Position", Robot.elevator.getPosition())
+
     }
 }

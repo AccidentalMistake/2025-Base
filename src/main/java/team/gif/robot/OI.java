@@ -1,6 +1,7 @@
 package team.gif.robot;
 
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.PrintCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
@@ -96,6 +97,7 @@ public class OI {
         dX.whileTrue(new MotorForward());
         dB.whileTrue(new MotorReverse());
         dY.whileTrue(new SparkMaxForward());
+        dLBump.onTrue(new InstantCommand(Robot.pneumaticPiston::Toggle));
 
 
     }

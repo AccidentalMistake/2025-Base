@@ -16,12 +16,12 @@ import team.gif.robot.RobotMap;
 
 public class NeoMotorSparkMax extends SubsystemBase {
 
-    private final SparkMax NeoMotorSparkMax;
+    private final SparkMax neoMotorSparkMax;
     private final SparkClosedLoopController sparkClosedLoopController;
 
     public NeoMotorSparkMax() {
-        NeoMotorSparkMax = new SparkMax(RobotMap.SPARKMAX_ID, SparkLowLevel.MotorType.kBrushless);
-        sparkClosedLoopController = NeoMotorSparkMax.getClosedLoopController();
+        neoMotorSparkMax = new SparkMax(RobotMap.SPARKMAX_ID, SparkLowLevel.MotorType.kBrushless);
+        sparkClosedLoopController = neoMotorSparkMax.getClosedLoopController();
 
         SparkMaxConfig config = new SparkMaxConfig();
         config.idleMode(SparkBaseConfig.IdleMode.kBrake);
@@ -29,15 +29,15 @@ public class NeoMotorSparkMax extends SubsystemBase {
 
         config.closedLoop.pid(Constants.NeoSparkMax.KP, Constants.NeoSparkMax.KI, 0);
 
-        NeoMotorSparkMax.configure(config, SparkBase.ResetMode.kResetSafeParameters, SparkBase.PersistMode.kPersistParameters);
+        neoMotorSparkMax.configure(config, SparkBase.ResetMode.kResetSafeParameters, SparkBase.PersistMode.kPersistParameters);
     }
 
     public void SetPercentOutput(double percentOutput){
-        NeoMotorSparkMax.set(percentOutput);
+        neoMotorSparkMax.set(percentOutput);
     }
 
     public void setVoltage(double voltage){
-        NeoMotorSparkMax.setVoltage(voltage);
+        neoMotorSparkMax.setVoltage(voltage);
     }
 
     public void setRPM(double setpoint){

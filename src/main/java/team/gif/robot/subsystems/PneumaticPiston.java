@@ -6,18 +6,18 @@ package team.gif.robot.subsystems;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
-import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import team.gif.robot.RobotMap;
 
 public class PneumaticPiston extends SubsystemBase {
 
-    private DoubleSolenoid PneumaticPiston;
+    private final DoubleSolenoid pneumaticPiston;
 
     public PneumaticPiston() {
-        PneumaticPiston = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, RobotMap.PNEUMATIC_PISTON_IN_ID, RobotMap.PNEUMATIC_PISTON_OUT_ID);
+        pneumaticPiston = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, RobotMap.PNEUMATIC_PISTON_IN_ID, RobotMap.PNEUMATIC_PISTON_OUT_ID);
     }
 
-    public void Toggle(){PneumaticPiston.toggle();}
+    public void Toggle(){
+        pneumaticPiston.toggle();}
 
 }

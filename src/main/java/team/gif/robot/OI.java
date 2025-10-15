@@ -9,6 +9,7 @@ import team.gif.robot.commands.FPGATTimestamp;
 import team.gif.robot.commands.MotorForward;
 import team.gif.robot.commands.MotorReverse;
 import team.gif.robot.commands.SparkMaxForward;
+import team.gif.robot.commands.SparkMaxVelocity;
 
 public class OI {
     /*
@@ -97,6 +98,7 @@ public class OI {
         dX.whileTrue(new MotorForward());
         dB.whileTrue(new MotorReverse());
         dY.whileTrue(new SparkMaxForward());
+        dA.whileTrue(new SparkMaxVelocity());
         dLBump.onTrue(new InstantCommand(Robot.pneumaticPiston::Toggle));
 
 

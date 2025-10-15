@@ -5,13 +5,13 @@ import team.gif.robot.RobotMap;
 
 public class LimitSwitch{
 
-    private static DigitalInput LimitSwitch;
+    private static DigitalInput limitSwitch;
 
     public LimitSwitch() {
-        LimitSwitch = new DigitalInput(RobotMap.LIMIT_SWITCH_ID);
+        limitSwitch = new DigitalInput(RobotMap.LIMIT_SWITCH_ID);
     }
 
     public boolean getSwitchState(){
-        return LimitSwitch.get();
+        return limitSwitch.get();
     }
 }

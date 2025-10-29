@@ -17,7 +17,7 @@ public class UI {
     public UI() {
         ShuffleboardTab shuffleboardTab = Shuffleboard.getTab("FRC 2025 Pre-Season");
         shuffleboardTab.addBoolean("Limit Switch", Robot.limitSwitch::getSwitchState);
-
+        shuffleboardTab.addDouble("SparkMAx Heading", Robot.neoMotorSparkMax::encoderVelocity);
         Robot.pigeon.addToShuffleboard("FRC 2025 BAB", "Pigeon Heading");
         
     }

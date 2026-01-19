@@ -20,14 +20,14 @@ public final class Constants {
 
     public static final class NeoSparkMax{
         public static final double VOLTAGE = 5;
-        public static final double RPM = 2500;
+        public static final double RPM = 2300;
         //Long RPM = 3000
         //Mid RPM = 2500
-        //Short RPM
+        //Short RPM = 2300
         public static final double KP = 0.0017;
         //long KP = 0.0017
         //Mid KP = 0.0017
-        //Short KP =
+        //Short KP = 0.0017
         public static final double KI = 0;
     }
 

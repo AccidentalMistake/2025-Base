@@ -30,6 +30,6 @@ public class SparkMaxVelocity extends Command {
     // Called when the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
-        Robot.neoMotorSparkMax.setRPM(0);
+        Robot.neoMotorSparkMax.setVoltage(0);
     }
 }

@@ -13,23 +13,23 @@ import team.gif.robot.RobotMap;
 
 public class TalonSrxMotor extends SubsystemBase {
 
-    private final TalonSRX talonSRX;
+    //private final TalonSRX talonSRX;
 
 
     public TalonSrxMotor() {
-        talonSRX = new TalonSRX(RobotMap.TALON_SRX_MOTOR);
-        talonSRX.configFactoryDefault();
-        talonSRX.setNeutralMode(NeutralMode.Brake);
+        //talonSRX = new TalonSRX(RobotMap.TALON_SRX_MOTOR);
+        //talonSRX.configFactoryDefault();
+        //talonSRX.setNeutralMode(NeutralMode.Brake);
     }
 
     public void move(double percentOutput){
 
-        if (Robot.limitSwitch.getSwitchState()) {
-            talonSRX.set(TalonSRXControlMode.PercentOutput, percentOutput/2);
-        }
-        else {
-            talonSRX.set(TalonSRXControlMode.PercentOutput, percentOutput);
-        }
+//        if (Robot.limitSwitch.getSwitchState()) {
+//            talonSRX.set(TalonSRXControlMode.PercentOutput, percentOutput/2);
+//        }
+//        else {
+//            talonSRX.set(TalonSRXControlMode.PercentOutput, percentOutput);
+//        }
     }
 }
 

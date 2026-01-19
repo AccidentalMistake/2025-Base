@@ -15,10 +15,10 @@ public class UI {
      *  and save file as "YYYY elastic-layout.json"
      */
     public UI() {
-        ShuffleboardTab shuffleboardTab = Shuffleboard.getTab("FRC 2025 Pre-Season");
-        shuffleboardTab.addBoolean("Limit Switch", Robot.limitSwitch::getSwitchState);
-        shuffleboardTab.addDouble("SparkMAx Heading", Robot.neoMotorSparkMax::encoderVelocity);
-        Robot.pigeon.addToShuffleboard("FRC 2025 BAB", "Pigeon Heading");
+        //ShuffleboardTab shuffleboardTab = Shuffleboard.getTab("FRC 2025 Pre-Season");
+        //shuffleboardTab.addBoolean("Limit Switch", Robot.limitSwitch::getSwitchState);
+        //shuffleboardTab.addDouble("SparkMAx Heading", Robot.neoMotorSparkMax::encoderVelocity);
+        //Robot.pigeon.addToShuffleboard("FRC 2025 BAB", "Pigeon Heading");
         
     }
 

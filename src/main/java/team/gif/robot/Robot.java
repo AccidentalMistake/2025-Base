@@ -47,7 +47,7 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     robotContainer = new RobotContainer();
     //limitSwitch = new LimitSwitch();
-    pigeon = new Pigeon(RobotMap.PIGEON_ID);
+    //pigeon = new Pigeon(RobotMap.PIGEON_ID);
     //talonSrxMotor = new TalonSrxMotor();
     //talonSrxMotor.setDefaultCommand(new TalonJoystick());
     neoMotorSparkMax = new NeoMotorSparkMax();

@@ -11,13 +11,14 @@ import team.gif.robot.RobotMap;
 
 public class PneumaticPiston extends SubsystemBase {
 
-    private final DoubleSolenoid pneumaticPiston;
+    //private final DoubleSolenoid pneumaticPiston;
 
     public PneumaticPiston() {
-        pneumaticPiston = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, RobotMap.PNEUMATIC_PISTON_IN_ID, RobotMap.PNEUMATIC_PISTON_OUT_ID);
+        //pneumaticPiston = new DoubleSolenoid(PneumaticsModuleType.CTREPCM, RobotMap.PNEUMATIC_PISTON_IN_ID, RobotMap.PNEUMATIC_PISTON_OUT_ID);
     }
 
     public void Toggle(){
-        pneumaticPiston.toggle();}
+        //pneumaticPiston.toggle();
+        }
 
 }

@@ -25,10 +25,10 @@ import team.gif.robot.subsystems.drivers.Pigeon;
 public class Robot extends TimedRobot {
   private static Command autonomousCommand;
   private RobotContainer robotContainer;
-  public static LimitSwitch limitSwitch;
-  public static TalonSrxMotor talonSrxMotor;
+  //public static LimitSwitch limitSwitch;
+  //public static TalonSrxMotor talonSrxMotor;
   public static NeoMotorSparkMax neoMotorSparkMax;
-  public static PneumaticPiston pneumaticPiston;
+  //public static PneumaticPiston pneumaticPiston;
   public static OI oi;
 
   public static Pigeon pigeon;
@@ -46,12 +46,12 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     robotContainer = new RobotContainer();
-    limitSwitch = new LimitSwitch();
+    //limitSwitch = new LimitSwitch();
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
-    talonSrxMotor = new TalonSrxMotor();
-    talonSrxMotor.setDefaultCommand(new TalonJoystick());
+    //talonSrxMotor = new TalonSrxMotor();
+    //talonSrxMotor.setDefaultCommand(new TalonJoystick());
     neoMotorSparkMax = new NeoMotorSparkMax();
-    pneumaticPiston = new PneumaticPiston();
+    //pneumaticPiston = new PneumaticPiston();
     //These should be at or near the bottom
     oi = new OI();
     ui = new UI();

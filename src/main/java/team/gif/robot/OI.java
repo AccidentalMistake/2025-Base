@@ -94,12 +94,12 @@ public class OI {
          * Simple Test:
          *   aX.onTrue(new PrintCommand("aX"));
          */
-        dA.onTrue(new FPGATTimestamp());
-        dX.whileTrue(new MotorForward());
-        dB.whileTrue(new MotorReverse());
+        //dA.onTrue(new FPGATTimestamp());
+        //dX.whileTrue(new MotorForward());
+        //dB.whileTrue(new MotorReverse());
         dY.whileTrue(new SparkMaxForward());
         dA.whileTrue(new SparkMaxVelocity());
-        dLBump.onTrue(new InstantCommand(Robot.pneumaticPiston::Toggle));
+        //dLBump.onTrue(new InstantCommand(Robot.pneumaticPiston::Toggle));
 
 
     }
